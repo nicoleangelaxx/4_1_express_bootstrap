@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Products</title>
+    <style>
+        .bg-custom-gray {
+            background-color: #D1D1D1 ;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">E-Commerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success btn-sm rounded-pill" type="submit" style="width: 120px;">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                            <i class="fas fa-plus-square fa-lg"></i>
+                            Add Product
+                        </a>
+                    </li>
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <input type="proName" class="form-control" id="floatingInput" placeholder="Product Name">   
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">Description</span>
+                                            <textarea class="form-control" aria-label="Description"></textarea> 
+                                          </div>
+                                          <div class="input-group mb-3">
+                                            <span class="input-group-text">$</span>
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                            <span class="input-group-text">.00</span>
+                                          </div>
+                                        <div class="mb-3">
+                                            <label for="productImage" class="form-label">Product Image</label>
+                                            <input type="file" class="form-control" id="productImage">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Add Product</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-custom-gray py-4">
+        <div class="container px-2 px-lg-3 my-4">
+            <div class="text-center text-black">
+                <h1 class="display-4 fw-bolder">Shop in Style</h1>
+                <p class="lead fw-normal text-black-50 mb-0" style="font-size: 18px;">Style Meets You: Elevate Your Wardrobe Today!</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row" id="productContainer">
+            
+            <!-- PRODUCTS -->
+            <div class="col-md-4 mb-4">
+                <div class="card mx-4" style="width: 25rem;">
+                    <img src="/images/jacket.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Distressed faux leather trucker jacket</h5>
+                        <p class="card-text">Crafted for both style and comfort, this versatile piece adds a rugged touch to any outfit. 
+                            With its unique distressed finish and premium faux leather, it's a must-have for trendsetters.</p>
+                        <div class="card-footer text-muted">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>Price:</span>
+                                    <span class="badge bg-dark">$390</span>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-outline-success me-2">Add to Cart</button>
+                                    <button type="button" class="btn btn-outline-info px-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mx-4" style="width: 25rem;">
+                    <img src="/images/cardigan.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardigan with fuzzy polo collar and zip</h5>
+                        <p class="card-text">Stay cozy and chic with our cardigan featuring a fuzzy polo collar and convenient zip closure. 
+                            This versatile piece adds a touch of warmth and elegance to your wardrobe.</p>
+                        <div class="card-footer text-muted">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>Price:</span>
+                                    <span class="badge bg-dark">$590</span>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-outline-success me-2">Add to Cart</button>
+                                    <button type="button" class="btn btn-outline-info px-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mx-4" style="width: 25rem;">
+                    <img src="/images/jeans.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Baggy Jeans</h5>
+                        <p class="card-text">Elevate your casual style with our Baggy Jeans, a nod to the effortlessly cool aesthetic.
+                             With a relaxed fit and durable denim, these jeans offer both comfort and a fashion-forward look.</p>
+                        <div class="card-footer text-muted">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>Price:</span>
+                                    <span class="badge bg-dark">$200</span>
+                                </div>
+                                <div class="d-flex">
+                                    <button type="button" class="btn btn-outline-success me-2">Add to Cart</button>
+                                    <button type="button" class="btn btn-outline-info px-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
